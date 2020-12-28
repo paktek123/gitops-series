@@ -348,7 +348,7 @@ spec:
             - --validating-webhook=:8443
             - --validating-webhook-certificate=/usr/local/certificates/cert
             - --validating-webhook-key=/usr/local/certificates/key
-            - --publish-status-address=localhost:81
+            - --publish-status-address=localhost
             - --http-port=81
           securityContext:
             capabilities:
