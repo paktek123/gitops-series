@@ -349,6 +349,7 @@ spec:
             - --validating-webhook-certificate=/usr/local/certificates/cert
             - --validating-webhook-key=/usr/local/certificates/key
             - --publish-status-address=localhost
+            - --http-port=82
           securityContext:
             capabilities:
               drop:
