@@ -288,7 +288,7 @@ spec:
     - name: http
       port: 82
       protocol: TCP
-      targetPort: http
+      targetPort: 82
     - name: https
       port: 443
       protocol: TCP
@@ -348,7 +348,7 @@ spec:
             - --validating-webhook=:8443
             - --validating-webhook-certificate=/usr/local/certificates/cert
             - --validating-webhook-key=/usr/local/certificates/key
-            - --publish-status-address=localhost
+            - --publish-status-address=localhost:82
             - --http-port=82
           securityContext:
             capabilities:
