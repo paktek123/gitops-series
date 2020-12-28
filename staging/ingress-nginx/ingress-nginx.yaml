@@ -348,7 +348,7 @@ spec:
             - --validating-webhook=:8443
             - --validating-webhook-certificate=/usr/local/certificates/cert
             - --validating-webhook-key=/usr/local/certificates/key
-            - --publish-service=ingress-nginx/ingress-nginx-controller
+            - --publish-status-address=localhost:81
             - --http-port=81
           securityContext:
             capabilities:
