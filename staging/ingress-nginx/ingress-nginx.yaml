@@ -288,7 +288,7 @@ spec:
     - name: http
       port: 81
       protocol: TCP
-      targetPort: 81
+      targetPort: 80
     - name: https
       port: 443
       protocol: TCP
@@ -349,7 +349,6 @@ spec:
             - --validating-webhook-certificate=/usr/local/certificates/cert
             - --validating-webhook-key=/usr/local/certificates/key
             - --publish-status-address=localhost
-            - --http-port=81
           securityContext:
             capabilities:
               drop:
@@ -391,7 +390,7 @@ spec:
             failureThreshold: 3
           ports:
             - name: http
-              containerPort: 81
+              containerPort: 80
               protocol: TCP
               hostPort: 81
             - name: https
