@@ -288,7 +288,7 @@ spec:
     - name: http
       port: 82
       protocol: TCP
-      targetPort: 82
+      targetPort: 80
     - name: https
       port: 443
       protocol: TCP
@@ -348,8 +348,7 @@ spec:
             - --validating-webhook=:8443
             - --validating-webhook-certificate=/usr/local/certificates/cert
             - --validating-webhook-key=/usr/local/certificates/key
-            - --publish-service=ingress-nginx/ingress-nginx-controller
-            - --http-port=82
+            - --publish-status-address=localhost
           securityContext:
             capabilities:
               drop:
@@ -391,7 +390,7 @@ spec:
             failureThreshold: 3
           ports:
             - name: http
-              containerPort: 82
+              containerPort: 80
               protocol: TCP
               hostPort: 82
             - name: https
