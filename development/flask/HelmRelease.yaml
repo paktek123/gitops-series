@@ -10,4 +10,4 @@ spec:
     ref: main
     path: chart
   values:
-    name: flask-application-development
+    name: flask
