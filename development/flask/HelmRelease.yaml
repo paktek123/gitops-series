@@ -6,7 +6,7 @@ metadata:
 spec:
   releaseName: flask
   chart:
-    git: git@github.com:paktek123/gitops-series
+    git: https://github.com/paktek123/gitops-series
     ref: main
     path: chart
   values:
