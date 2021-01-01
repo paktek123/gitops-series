@@ -14,3 +14,4 @@ spec:
     namespace: service2
     application_name: service2
     application_cluster: development
+    ingress_enabled: false
