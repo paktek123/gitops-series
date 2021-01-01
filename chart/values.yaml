@@ -2,3 +2,4 @@ name: flask-application
 namespace: test-namespace
 image: docker.io/library/flask-test-gitops:latest
 replicas: 2
+ingress_enabled: true

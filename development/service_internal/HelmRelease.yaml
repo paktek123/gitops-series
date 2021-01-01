@@ -13,3 +13,4 @@ spec:
     name: flask-internal
     application_name: internal
     application_cluster: development
+    ingress_enabled: false
