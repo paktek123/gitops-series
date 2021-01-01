@@ -1,0 +1,15 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: flask-different-cluster
+  namespace: service3
+spec:
+  releaseName: flask-different-cluster
+  chart:
+    git: https://github.com/paktek123/gitops-series
+    ref: main
+    path: chart
+  values:
+    name: flask-different-cluster
+    application_name: service3
+    application_cluster: staging
