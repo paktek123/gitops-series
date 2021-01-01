@@ -11,5 +11,6 @@ spec:
     path: chart
   values:
     name: flask-different-namespace
+    namespace: service2
     application_name: service2
     application_cluster: development
