@@ -8,7 +8,7 @@ spec:
   chart:
     spec:
       chart: ./chart
-      version: "4"
+      version: "3"
       sourceRef:
         kind: GitRepository
         name: gitops-series 
