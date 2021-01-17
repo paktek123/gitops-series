@@ -7,7 +7,7 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: chart
+      chart: ./chart
       version: 3
       sourceRef:
         kind: GitRepository
