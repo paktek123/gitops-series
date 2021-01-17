@@ -4,10 +4,15 @@ metadata:
   name: flask
   namespace: test-namespace
 spec:
-  releaseName: flask
+  interval: 5m
   chart:
-    git: https://github.com/paktek123/gitops-series
-    ref: main
-    path: chart
+    spec:
+      chart: chart
+      version: 3
+      sourceRef:
+        kind: GitRepository
+        name: gitops-series 
+        namespace: flux-system
+      interval: 1m 
   values:
     name: flask
