@@ -16,3 +16,4 @@ spec:
       interval: 1m 
   values:
     name: flask
+    ingress_enabled: false
