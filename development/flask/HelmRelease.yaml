@@ -7,11 +7,11 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: "./chart"
-      version: "1"
+      chart: "flask-application"
+      version: "2"
       sourceRef:
-        kind: GitRepository
-        name: gitops-series
+        kind: HelmRepository
+        name: localchartmuseum
         namespace: flux-system
       interval: 1m
   values:
