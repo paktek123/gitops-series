@@ -1,0 +1,23 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: flask-internal
+  namespace: test-namespace
+spec:
+  interval: 5m
+  releaseName: flask-internal
+  chart:
+    spec:
+      chart: "./chart"
+      version: "3"
+      sourceRef:
+        kind: GitRepository
+        name: gitops-series
+        namespace: flux-system
+      interval: 1m
+  values:
+    name: flask-internal
+    namespace: test-namespace
+    application_name: internal
+    application_cluster: development
+    ingress_enabled: false

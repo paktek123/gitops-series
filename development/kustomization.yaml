@@ -3,6 +3,8 @@ kind: Kustomization
 resources:
   - ../base/ingress-nginx/
   - ./flask/
+  - ./service_internal/
+  - ./service2/
 patchesStrategicMerge:
   - patches/ingress-nginx-deployment.yaml
   - patches/ingress-nginx-service.yaml
