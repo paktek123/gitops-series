@@ -1,0 +1,23 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: flask-different-cluster
+  namespace: test-namespace
+spec:
+  interval: 5m
+  releaseName: flask-different-cluster
+  chart:
+    spec:
+      chart: "./chart"
+      version: "3"
+      sourceRef:
+        kind: GitRepository
+        name: gitops-series
+        namespace: flux-system
+      interval: 1m
+  values:
+    name: flask-different-cluster
+    namespace: test-namespace
+    application_name: flask-different-cluster
+    application_cluster: staging
+    ingress_enabled: false
