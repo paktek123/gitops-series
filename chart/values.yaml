@@ -2,3 +2,6 @@ name: flask-application
 namespace: test-namespace
 image: docker.io/library/flask-test-gitops:latest
 replicas: 2
+application_name: service1  # new
+application_cluster: cluster1  # new
+ingress_enabled: true  # new

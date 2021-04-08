@@ -19,3 +19,8 @@ spec:
         imagePullPolicy: Never
         ports:
         - containerPort: 5000
+        env:  # new
+        - name: NAME
+          value: {{ .Values.application_name }}
+        - name: CLUSTER
+          value: {{ .Values.application_cluster }}
